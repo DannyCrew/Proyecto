@@ -1,0 +1,32 @@
+<div class="FormLogin">
+<form [formGroup]="myForm"  (ngSubmit)="submitFormulario()">
+    <div class="mb-3 title">
+        <h1 class="title_login">Iniciar sesión</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" class="row" width="100" height="100" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+        </svg>
+    </div>
+    <div class="mb-3" emailGroup>
+        <label class="form-label">Correo:</label>
+        <input formControlName="email" [class.is-invalid]="f.email.errors && f.email.touched" type="email" class="form-control" placeholder="Introduzca el correo">
+        <div class="invalid-feedback">
+            Correo invalido.
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Contraseña:</label>
+        <input formControlName="password" [class.is-invalid]="f.password.errors && f.password.touched" type="password" class="form-control" placeholder="Introduzca contraseña">
+        <div class="invalid-feedback">
+            Contraseña invalida.
+        </div>
+    </div>      
+    <div class="mb-3" class="btn-send">  
+        <button class="btn btn-primary">Iniciar sesión</button>
+    </div>
+</form>
+    <div class="mb-3" class="btn-send">
+        <button class="btn btn-secondary" (click)="onSingin()">Registrarse</button>
+    </div>
+</div>
+    

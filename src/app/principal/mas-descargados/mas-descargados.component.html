@@ -1,0 +1,5 @@
+<div *ngFor="let videojuego of arregloDeJuegos" class="row">
+    <ng-container *ngIf="videojuego.downloads > 100">
+      <app-card-game [videojuego]="videojuego"></app-card-game>
+    </ng-container>
+</div>

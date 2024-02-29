@@ -1,0 +1,33 @@
+.FormLogin{
+    display: grid;
+    place-items: center;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    box-shadow: -30px -30px 20px rgb(155, 153, 153),
+               30px  30px 20px rgba(47, 67, 251, 0.826);
+    border: 1px solid rgb(141, 146, 242);
+}
+.bi-person-circle,
+.title_login{
+    color: rgba(47, 67, 251, 0.826);
+}
+
+.title{
+    display: grid;
+    place-items: center;
+}
+.form-control{
+    width: 350px;
+}
+.btn-send{
+    display: grid;
+    place-items: center;
+}
+button{
+    width: 250px;
+    margin: 5px;
+}

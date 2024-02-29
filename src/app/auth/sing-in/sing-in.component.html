@@ -1,0 +1,40 @@
+<form class="FormSing" [formGroup]="myForm"  (ngSubmit)="submitFormulario()">
+    <div class="mb-3 title">
+        <h1 class="title_sing-in">Registrarse</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" class="row" width="100" height="100" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+        </svg>
+    </div>
+    <div class="mb-3" >
+        <label class="form-label">Nombre:</label>
+        <input formControlName="name" type="text" class="form-control" [class.is-invalid]="f.name.errors && f.name.touched" placeholder="Introduzca el nombre" required>
+        <div class="invalid-feedback">
+            Nombre requerido
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">E-mail:</label>
+        <input formControlName="email" type="email" class="form-control" [class.is-invalid]="f.email.errors && f.email.touched" placeholder="Introduzca el correo">
+        <div class="invalid-feedback">
+            Ejemplo: user&#64;email.com
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Contraseña:</label>
+        <input formControlName="password"  type="password" class="form-control" [class.is-invalid]="f.password.errors && f.password.touched" placeholder="Introduzca contraseña">
+        <div class="invalid-feedback">
+            Contraseña requerida
+        </div>
+    </div>  
+    <div class="mb-3">
+        <label class="form-label">Confirmar contraseña:</label>
+        <input formControlName="CPassword"  type="password" class="form-control" [class.is-invalid]="f.CPassword.touched && f.CPassword.value !== f.password.value" placeholder="Confirmar contraseña">
+        <div class="invalid-feedback">
+            Contraseña no coincide
+        </div>
+    </div> 
+    <div class="mb-3" class="row">
+        <button class="btn btn-primary" type="submit" >Registrarse</button>
+    </div>
+</form>

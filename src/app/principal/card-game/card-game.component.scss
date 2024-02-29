@@ -1,0 +1,38 @@
+.videojuego-container {
+    display: grid;
+    place-content: center;
+    max-width:min-content;
+    margin: 20px auto;
+    padding: 15px;
+    margin: 15px;
+    border: 1px solid #2918e6;
+    border-radius: 8px;
+    background-color: rgba(7, 30, 236, 0.256);
+  
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  
+    .imgContainer{
+      display: grid;
+      place-content: center;
+      color: rgb(7, 36, 255);
+      background-color: rgba(252, 252, 254, 0.793);
+      width: 300px;
+      height: 200px;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      margin-bottom: 8px;
+    }
+  
+    strong {
+      font-weight: bold;
+    }
+  }
+  

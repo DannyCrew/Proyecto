@@ -1,0 +1,5 @@
+<div *ngFor="let videojuego of arregloDeJuegos">
+    <ng-container *ngIf="videojuego.upcoming === true">
+      <app-card-game [videojuego]="videojuego" class="col"></app-card-game>
+    </ng-container>
+  </div>

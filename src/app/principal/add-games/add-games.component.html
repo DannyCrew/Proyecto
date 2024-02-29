@@ -1,0 +1,65 @@
+<div class="FormAddGame">
+<form [formGroup]="myFormaddgames" class="game-form" (ngSubmit)="submitFormulario()">
+    <h3 class="title_Add_Games">Agregar nuevo videojuego</h3>
+  
+    <div class="row">
+      <div class="col-md-6">
+        <label class="form-label">Título:</label>
+        <input formControlName="title" type="text" class="form-control" [class.is-invalid]="f.title.errors && f.title.touched" placeholder="Ingrese el título del videojuego">
+        <div class="invalid-feedback">
+            Campo necesario.
+        </div>
+      </div>
+  
+      <div class="col-md-6">
+        <label class="form-label">Clasificación:</label>
+        <input formControlName="classification" type="clas" class="form-control" [class.is-invalid]="f.classification.errors && f.classification.touched" placeholder="0">
+        <div class="invalid-feedback">
+            Campo necesario.
+        </div>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-12">
+        <label class="form-label">Descripción:</label>
+        <textarea formControlName="description" type="desc" class="form-control description" [class.is-invalid]="f.description.errors && f.description.touched" placeholder="Ingrese la descripción del videojuego"></textarea>
+        <div class="invalid-feedback">
+            Campo necesario.
+        </div>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-6">
+        <label class="form-label">Fecha de lanzamiento:</label>
+        <input formControlName="releaseDate" type="date" class="form-control" [class.is-invalid]="f.releaseDate.errors && f.releaseDate.touched" name="releaseDate">
+        <div class="invalid-feedback">
+            Campo necesario.
+        </div>
+      </div>
+  
+      <div class="col-md-6">
+        <label class="form-label">Número de descargas:</label>
+        <input formControlName="downloads" type="number" class="form-control" [class.is-invalid]="f.downloads.errors && f.downloads.touched" name="downloads" placeholder="0">
+        <div class="invalid-feedback">
+            Campo necesario.
+        </div>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-12">
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="upcoming" name="upcoming">
+          <label class="form-check-label" for="upcoming">Próximamente</label>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex align-items-center">
+        <div class="col-md-12 text-center">
+            <button type="submit" class="btn btn-primary">Agregar</button>
+        </div>
+    </div>
+</form>
+</div>

@@ -1,0 +1,50 @@
+.navbar-brand {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.navbar-nav.me-auto .nav-item {
+    margin-left: 25px;
+}
+
+.navbar-nav.ms-auto .nav-item {
+    margin-right: 10px;
+}
+
+.navbar-nav {
+    .nav-item {
+      &.active,
+      &:focus {
+        .links {
+          color: white;
+          background-color: rgba(33, 54, 243, 0.952);
+          border-radius: 8px;
+        }
+      }
+  
+      .links {
+        transition: background-color 0.3s, border-radius 0.3s;
+  
+        &:hover {
+          color: white;
+          background-color: rgba(33, 54, 243, 0.952);
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+  
+  .logout{
+    transition: background-color 0.3s, border-radius 0.3s;
+  
+    &:hover {
+        color: white;
+      background-color: rgba(177, 17, 57, 0.952);
+      border-radius: 8px;
+    }
+  }
+  
+.nav-link:hover{
+    cursor: pointer;
+
+}
